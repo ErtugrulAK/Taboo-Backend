@@ -1,0 +1,6 @@
+.\venv\Scripts\activate
+
+python ai_guesser.py
+
+
+C:/Users/senmu/AppData/Local/Programs/Python/Python313/python.exe d:/DERS/UDEMY/TABU/ai_guesser.py

@@ -6,6 +6,7 @@ from typing import List
 
 from read_file import read_taboo_words
 from ai_moderator import check_description
+from ai_guesser import guess_object
 
 app = FastAPI()
 
@@ -16,6 +17,9 @@ class GetWordRequest(BaseModel):
 
 class DescriptionCheckRequest(BaseModel):
     target_word: str
+    description: str
+
+class GuessRequest(BaseModel):
     description: str
 
 @app.get("/")
@@ -37,3 +41,8 @@ def get_word(request: GetWordRequest):
 def check_desc_endpoint(request: DescriptionCheckRequest):
     result_json_str = check_description(taboo_dict, request.target_word, request.description)
     return json.loads(result_json_str)
+
+@app.post("/api/guess-word")
+def guess_word_endpoint(request: GuessRequest):
+    guess = guess_object(request.description)
+    return {"guess": guess}

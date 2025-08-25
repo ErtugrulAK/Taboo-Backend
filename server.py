@@ -1,6 +1,7 @@
 import random
 import json
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 
@@ -9,6 +10,19 @@ from ai_moderator import check_description
 from ai_guesser import guess_object
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 taboo_dict = read_taboo_words()
 
@@ -44,5 +58,9 @@ async def check_desc_endpoint(request: DescriptionCheckRequest):
 
 @app.post("/api/guess-word")
 async def guess_word_endpoint(request: GuessRequest):
-    guess = await guess_object(request.description)
-    return {"guess": guess}
+    try:
+        guess = await guess_object(request.description)
+        return {"guess": guess}
+    except Exception as e:
+        print(f"Error in guess_word_endpoint: {e}")
+        raise HTTPException(status_code=503, detail="AI service is currently unavailable.")

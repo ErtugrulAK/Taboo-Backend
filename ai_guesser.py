@@ -4,11 +4,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
+model_name = os.getenv("GEMINI_MODEL_NAME", "gemini-1.5-flash")
 
 if api_key:
     genai.configure(api_key=api_key)
 
-model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+model = genai.GenerativeModel(model_name=model_name)
 
 async def guess_object(description: str) -> str:
     try:

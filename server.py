@@ -24,7 +24,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-taboo_dict = read_taboo_words()
+try:
+    taboo_dict = read_taboo_words()
+except (FileNotFoundError, ValueError) as e:
+    print(f"FATAL: {e}")
+    exit()
+
 
 class GetWordRequest(BaseModel):
     used_words: List[str]

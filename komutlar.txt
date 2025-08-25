@@ -1,7 +1,9 @@
-.\venv\Scripts\activate
+python -m venv venv
 
-python ai_guesser.py
+source venv/Scripts/activate
 
-C:/Users/senmu/AppData/Local/Programs/Python/Python313/python.exe d:/DERS/UDEMY/TABU/ai_guesser.py
+pip install -r requirements.txt
+
+python -m nltk.downloader wordnet
 
 python -m uvicorn server:app --reload

@@ -1,6 +1,14 @@
 import json
 import re
+import nltk
 from nltk.stem import WordNetLemmatizer
+
+try:
+    lemmatizer = WordNetLemmatizer()
+    lemmatizer.lemmatize('test')
+except LookupError:
+    print("Downloading required NLTK data (wordnet)...")
+    nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
 
@@ -12,6 +20,8 @@ def normalize_word(word):
 
 def check_description(taboo_dict: dict, target_word: str, description: str) -> str:
     taboo_words = taboo_dict.get(target_word, [])
+    taboo_words.append(target_word)
+    
     description_words = re.findall(r'\b\w+\b', description.lower())
 
     description_lemmas = set()

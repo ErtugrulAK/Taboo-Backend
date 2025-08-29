@@ -1,0 +1,29 @@
+Airplane → A large vehicle that travels through the air, carrying many people safely across long distances, often connecting different cities and countries.
+Autumn → The season when temperatures slowly drop, trees lose their leaves, and the environment is filled with colorful foliage and cooler winds.
+Basketball → A sport in which players move quickly on a court, trying to throw a ball into a round hoop to score points for their team.
+Bed → A piece of furniture designed for lying down comfortably at night, allowing people to rest, relax, and sleep after a long day.
+Beach → A sandy area next to a body of water where people relax, walk, enjoy the sun, and spend time with family or friends outdoors.
+Cafe → A small establishment where people gather to drink warm beverages, have snacks, meet friends, or spend time relaxing in a casual atmosphere.
+Car → A four-wheeled vehicle used for traveling from one location to another, providing transportation for people on streets or roads over long distances.
+Clothing → Items that people wear on their bodies to cover themselves, stay comfortable, express style, and adapt to different weather conditions.
+City → A large and populated area with tall buildings, streets, businesses, and many people living closely together, often full of activities.
+Football → A team sport where players try to move a ball into the opponent’s area to score points while following specific rules of the game.
+Forest → A vast natural area densely filled with trees, plants, and wildlife, often providing shade, fresh air, and opportunities for hiking or exploration.
+House → A building where people live, eat, sleep, and spend time together, providing shelter, comfort, and a sense of personal space for families.
+Hospital → A facility where trained professionals provide care and treatment to sick or injured people, helping them recover and improve their health safely.
+Kitchen → A room in a home where food is prepared, cooked, and sometimes served, often containing tools and appliances for making meals efficiently.
+Music → An art form created by organizing sounds and rhythms, which people listen to for enjoyment, relaxation, or emotional expression in various settings.
+Mountain → A large natural elevation of the earth’s surface, usually steep, challenging to climb, and often offering breathtaking views from the top.
+Painting → The act of applying colors to a surface, creating artistic images, scenes, or abstract forms for decoration, expression, or exhibition.
+Phone → A small portable device that allows people to communicate across distances by speaking, sharing information, or connecting in various ways.
+River → A natural flowing body of water moving from higher ground toward lower areas, often feeding lakes, seas, or other water bodies along its path.
+Shoe → An item worn on the feet to provide protection, support, and comfort while walking, running, or performing activities outdoors or indoors.
+Spring → The season when plants bloom, trees grow new leaves, and the weather gradually warms up, creating a lively and colorful environment.
+Supermarket → A large store where people go to purchase groceries, drinks, and household items, often organized in aisles for easy selection.
+Summer → The warmest season of the year, often associated with sunshine, outdoor activities, vacations, and opportunities for recreation and relaxation.
+Swimming → A physical activity where people move through water using their arms and legs, often for exercise, leisure, or competitive purposes.
+Television → A device that displays moving images and sounds, allowing people to watch shows, movies, news, and entertainment at home.
+Theater → A venue where live performers act out stories, entertain audiences, and present plays, musicals, or other performances in front of viewers.
+Tennis → A sport where players hit a ball back and forth over a net using specialized equipment, aiming to score points against their opponent.
+Village → A small community in a rural area where people live closely together, often farming or engaging in local trades and shared activities.
+Winter → The coldest season of the year, frequently bringing frost, snow, icy conditions, and short daylight hours for outdoor and indoor activities.

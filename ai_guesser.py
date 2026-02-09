@@ -1,24 +1,33 @@
 import os
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 
-load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
-model_name = os.getenv("GEMINI_MODEL_NAME", "gemini-1.5-flash")
+load_dotenv(override=True)
+api_key = os.getenv("GOOGLE_API_KEY", "")
 
-if api_key:
-    genai.configure(api_key=api_key)
-
-model = genai.GenerativeModel(model_name=model_name)
+client = genai.Client(api_key=api_key)
 
 async def guess_object(description: str) -> str:
+    if not description or len(description.strip()) < 3:
+        return "Description too short."
+
     try:
-        chat = model.start_chat()
-        response = await chat.send_message_async(
-            f"Guess two possible objects that might be described in this sentence: '{description}'. "
-            "Only respond with two guesses, separated by a comma. Do not explain anything."
+        response = client.models.generate_content(
+            model="models/gemini-2.5-flash-lite",
+            contents=f"Guess: '{description}'. Two words only, comma separated."
         )
-        return response.text.strip()
+        
+        if response and response.text:
+            return response.text.strip()
+        return "AI could not provide a response."
+
     except Exception as e:
-        print(f"An error occurred with the AI Guesser: {e}")
-        return "Error: Could not get a guess from the AI."
+        print(f"Cost-Oriented AI Error: {e}")
+        try:
+            alt = client.models.generate_content(
+                model="models/gemini-flash-lite-latest",
+                contents=f"Guess: '{description}'. Two words."
+            )
+            return alt.text.strip()
+        except:
+            return "Guess could not be retrieved."
